@@ -1,0 +1,17 @@
+{
+  "name": "resume-hng",
+  "version": "1.0.0",
+  "description": "First code task hng",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12",
+    "path": "^0.12.7"
+  }
+}
