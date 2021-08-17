@@ -89,13 +89,40 @@
             
           </div>
         </div>
-        <form class="form-container" method="POST">
+        <form class="form-container" >
             <h3>Reach Out to me </h3>
-            <input class="name-input" placeholder="Name"/>
-            <textarea class="name-input" placeholder="Message for me"></textarea>
+            <input class="name-input" id="email" placeholder="Your Email"/>
+            <input class="name-input" id="subject" placeholder="Subject"/>
+            <textarea class="name-input" id="content" placeholder="Message for me"></textarea>
             <button type="submit" class="submit-button">Submit</button>
         </form>
       </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $("form").on("submit", e => {
+        e.preventDefault();
+
+        const email = $("#email")
+          .val()
+          .trim();
+        const subject = $("#subject")
+          .val()
+          .trim();
+        const content = $("#content")
+          .val()
+          .trim();
+
+        const data = {
+          email,
+          subject,
+          content
+        };
+        $.post("/email", data, function(){
+        console.log("server recieved data")
+        })
+       
+      });
+    </script>
   </body>
 </html>
