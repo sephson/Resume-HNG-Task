@@ -22,7 +22,7 @@ app.post("/email", (req, res) => {
 
 app.use(express.static(path.join(__dirname, "public")));
 
-app.listen(3000, () => console.log("Server is running"));
+app.listen(process.env.PORT, () => console.log("Server is running"));
 
 process.on("unhandledRejection", (err) => {
   console.log(`Logged Error: ${err}`);
