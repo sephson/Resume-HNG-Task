@@ -16,7 +16,7 @@
 }
 .resume-image {
   width: 50%;
-  height: 8rem;
+  height: 12rem;
   border-radius: 50%;
   margin: 1rem 0;
 }
@@ -87,6 +87,10 @@ p {
 
 }
 
+a{
+  text-decoration: none;
+  color: #efefef;
+}
 .submit-button:hover{
   color: #efefef;
   background-color: #444941a1;
@@ -94,7 +98,14 @@ p {
   border: none;
 
 }
-
+@media screen and (max-width: 800px) {
+.resume-image {
+  width: 70%;
+  height: 10rem;
+  border-radius: 50%;
+  margin: 1rem 0;
+}
+}
 @media screen and (max-width: 650px) {
   .resume {
     display: grid;
@@ -107,5 +118,20 @@ p {
     color: #444941;
     padding-right: 1rem;
   }
+
+  .resume-image {
+    width: 30%;
+    height: 10rem;
+    border-radius: 50%;
+    margin: 1rem 0;
+  }
 }
 
+@media screen and (max-width: 450px) {
+  .resume-image {
+    width: 60%;
+    height: 10rem;
+    border-radius: 50%;
+    margin: 1rem 0;
+  }
+}

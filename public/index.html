@@ -26,8 +26,8 @@
           <div class="links-container">
             <h3 class="header-header">LINKS</h3>
             <a href="https://github.com/sephson"
-              ><i class="fab fa-github"></i
-            ></a>
+            
+            >Github</a>
 
             <p><a href="https://www.linkedin.com/feed/">LinkedIn</a></p>
           </div>
@@ -93,7 +93,7 @@
             <h3>Reach Out to me </h3>
             <input class="name-input" id="email" placeholder="Your Email"/>
             <input class="name-input" id="subject" placeholder="Subject"/>
-            <textarea class="name-input" id="content" placeholder="Message for me"></textarea>
+            <textarea class="name-input" id="text" placeholder="Message for me"></textarea>
             <button type="submit" class="submit-button">Submit</button>
         </form>
       </div>
@@ -109,14 +109,14 @@
         const subject = $("#subject")
           .val()
           .trim();
-        const content = $("#content")
+        const text = $("#text")
           .val()
           .trim();
 
         const data = {
           email,
           subject,
-          content
+          text
         };
         $.post("/email", data, function(){
         console.log("server recieved data")
