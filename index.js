@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.listen(process.env.PORT, () => console.log("Server is running"));
 
-process.on("unhandledRejection", (err) => {
-  console.log(`Logged Error: ${err}`);
-  server.close(() => process.exit(1));
-});
+// process.on("unhandledRejection", (err) => {
+//   console.log(`Logged Error: ${err}`);
+//   server.close(() => process.exit(1));
+// });
